@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Réveillon 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+            overflow: hidden;
+            position: relative;
+        }
+        .font-handwriting {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .card-enter {
+            animation: card-enter-anim 0.7s ease-out 0.3s forwards;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        @keyframes card-enter-anim {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(45deg, #f87171, #fb923c, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Animação de Fogos de Artifício */
+        .firework {
+            position: absolute;
+        }
+        .firework::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            width: 3px;
+            height: 50px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent);
+            animation: firework-rocket 1s ease-in-out forwards;
+        }
+        @keyframes firework-rocket {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-200px); }
+        }
+        .explosion {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: explosion 0.8s ease-out forwards;
+        }
+        @keyframes explosion {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        /* Animação de Confetes */
+        #confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: #f00; /* Cor definida via JS */
+            top: -20px;
+            opacity: 0.9;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <!-- Containers de Animação -->
+    <div id="fireworks-container" class="absolute top-0 left-0 w-full h-full overflow-hidden z-0"></div>
+    <div id="confetti-container"></div>
+
+    <div class="bg-white/90 backdrop-blur-sm text-gray-800 rounded-2xl shadow-2xl max-w-sm w-full mx-4 p-6 sm:p-8 text-center relative z-10 card-enter">
+        
+        <h1 class="font-handwriting text-5xl sm:text-6xl mb-2 text-gradient">Réveillon</h1>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-wider mb-4 text-gradient">2026</h2>
+
+        <p class="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
+            Que a passagem de ano renove e revigore nossos sonhos e metas. Conto com sua presença para celebrar a chegada de um novo ciclo!
+        </p>
+        
+        <div class="bg-purple-100 rounded-lg p-3 sm:p-4 mb-6 border border-purple-200">
+            <p class="font-bold text-base sm:text-lg text-purple-800">TERÇA-FEIRA</p>
+            <p class="text-xl sm:text-2xl font-bold text-pink-500">31/12/2025</p>
+            <p class="font-semibold mt-1 text-sm sm:text-base text-purple-700">A partir das 22:00H</p>
+        </div>
+
+        <div class="space-y-3">
+            <a href="https://maps.app.goo.gl/kCryKbQoW4CFJTpG6" target="_blank" class="flex items-center justify-center bg-purple-600 text-white font-bold py-3 px-4 rounded-lg w-full transition-transform transform hover:bg-purple-700 hover:scale-105 text-sm sm:text-base">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Local da Festa
+            </a>
+            
+            <a href="https://wa.me/5563992275017?text=Confirmo%20minha%20presen%C3%A7a%20no%20R%C3%A9veillon!" target="_blank" class="flex items-center justify-center bg-teal-500 text-white font-bold py-3 px-4 rounded-lg w-full transition-transform transform hover:bg-teal-600 hover:scale-105 text-sm sm:text-base">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Confirmar Presença
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fireworksContainer = document.getElementById('fireworks-container');
+            const confettiContainer = document.getElementById('confetti-container');
+            
+            const fireworkColors = ['#FFC700', '#FF0000', '#00FF00', '#0000FF', '#FF00FF', '#00FFFF'];
+            const confettiColors = ['#f94144', '#f3722c', '#f8961e', '#f9c74f', '#90be6d', '#43aa8b', '#577590', '#f72585'];
+
+            // Função para Fogos de Artifício
+            function createFirework() {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = `${Math.random() * 95}%`;
+                firework.style.bottom = '0px';
+                fireworksContainer.appendChild(firework);
+
+                setTimeout(() => {
+                    explode(firework);
+                    firework.remove();
+                }, 1000); 
+            }
+
+            function explode(firework) {
+                const x = firework.offsetLeft;
+                const y = window.innerHeight * 0.8;
+                const particleCount = 100;
+                const radius = 120;
+                const color = fireworkColors[Math.floor(Math.random() * fireworkColors.length)];
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'explosion';
+                    particle.style.backgroundColor = color;
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const randomRadius = Math.random() * radius;
+                    
+                    const finalX = x + Math.cos(angle) * randomRadius;
+                    const finalY = y + Math.sin(angle) * randomRadius;
+
+                    particle.style.left = `${x}px`;
+                    particle.style.top = `${y}px`;
+
+                    const animation = particle.animate([
+                        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                        { transform: `translate(${finalX - x}px, ${finalY - y}px) scale(0)`, opacity: 0 }
+                    ], {
+                        duration: 800 + Math.random() * 200,
+                        easing: 'ease-out'
+                    });
+                    
+                    animation.onfinish = () => particle.remove();
+                    fireworksContainer.appendChild(particle);
+                }
+            }
+            
+            // Função para Confetes
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+                confetti.style.animationDuration = `${Math.random() * 3 + 5}s`;
+                confetti.style.opacity = Math.random() + 0.2;
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 8000);
+            }
+
+            setInterval(createFirework, 1200);
+            setInterval(createConfetti, 150);
+        });
+    </script>
+</body>
+</html>
+
+
